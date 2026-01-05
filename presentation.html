@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso PostgreSQL — Presentación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
+
+  <style>
+    html, body { height: 100%; }
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .reveal { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); }
+    .reveal .slides section { color: #f8fafc; }
+    .slide-title { font-weight: 800; letter-spacing: -0.5px; }
+    .module-badge { display:inline-block; background: rgba(255,255,255,0.06); padding:6px 10px; border-radius:999px; margin-bottom:12px; color:#a3e635; font-weight:700; }
+    .content ul { margin-top: 0.6rem; }
+    .footer-note { font-size: 0.8rem; opacity: 0.8; margin-top: 1.2rem; }
+    /* card style for slide body */
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:10px; box-shadow: 0 6px 30px rgba(2,6,23,0.6); }
+    @media (max-width: 700px) { .card { padding: 12px; } }
+  </style>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+<!-- SLIDES BEGIN -->
+
+<section data-markdown>
+<script type="text/template">
+# 📘 Temario actualizado de PostgreSQL (2025)
+
+---
+
+_Slide inicial — bienvenidos al curso de PostgreSQL._
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 1: Introducción a PostgreSQL
+
+- ¿Qué es PostgreSQL?
+- Historia y evolución del proyecto
+- Diferencias con MySQL, MariaDB, SQL Server, Oracle
+- Casos de uso reales
+- Licencia y comunidad
+- Arquitectura general
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 2: Instalación y Configuración
+
+- Instalación en Linux, Windows, macOS, Docker
+- PostgreSQL como servicio
+- Estructura de directorios y archivos de configuración
+- Primer acceso con `psql`
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 3: Herramientas de PostgreSQL
+
+- `psql`, pgAdmin 4, DBeaver, TablePlus, DataGrip
+- Conexión desde aplicaciones externas
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 4: Fundamentos de Bases de Datos
+
+- Bases de datos relacionales: tablas, filas, columnas
+- Tipos de datos: numéricos, texto, fecha/hora, boolean, UUID, JSON/JSONB, arrays, ENUM
+- Claves primarias y foráneas
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 5: Lenguaje SQL – Nivel Básico
+
+- `CREATE DATABASE`, `CREATE TABLE`, `INSERT`, `SELECT`, `UPDATE`, `DELETE`
+- Claúsulas: `WHERE`, `ORDER BY`, `LIMIT / OFFSET` y alias `AS`
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 6: SQL – Nivel Intermedio
+
+- Operadores lógicos y de comparación
+- Funciones agregadas: `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`
+- `GROUP BY`, `HAVING`, `DISTINCT`, subconsultas, `CASE WHEN`
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 7: Relaciones y Joins
+
+- Relaciones 1:1, 1:N, N:N
+- `INNER`, `LEFT`, `RIGHT`, `FULL JOIN`
+- Buen uso de claves foráneas
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 8: Índices y Performance
+
+- Tipos de índices: B-Tree, Hash, GIN, GiST, BRIN
+- Índices compuestos, parciales e índices para JSONB
+- Uso de `EXPLAIN` y `EXPLAIN ANALYZE`
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 9: Transacciones y Concurrencia
+
+- `BEGIN`, `COMMIT`, `ROLLBACK`
+- ACID, Locks, MVCC
+- Niveles de aislamiento y deadlocks
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 10: Funciones, Procedimientos y Triggers
+
+- `CREATE FUNCTION`, `CREATE PROCEDURE`, PL/pgSQL
+- Triggers BEFORE/AFTER para INSERT/UPDATE/DELETE
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 11: Seguridad y Usuarios
+
+- Roles y permisos (`GRANT`, `REVOKE`)
+- Autenticación, control de acceso, RLS
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 12: Backup y Restauración
+
+- `pg_dump`, `pg_restore`
+- Backups lógicos vs físicos
+- Estrategias de respaldo y restauración parcial
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 13: PostgreSQL Avanzado
+
+- Vistas, vistas materializadas, tablespaces, particionamiento
+- Replicación: Streaming & Logical
+- High Availability (HA)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 14: PostgreSQL y JSON
+
+- JSON vs JSONB
+- Consultas e índices para JSONB
+- Casos de uso: APIs y microservicios
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 15: PostgreSQL para QA y Testing
+
+- Datos mock, seeds, validación y testing de integridad
+- Integración con Pytest y JMeter
+- Uso en pipelines CI/CD
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 16: PostgreSQL con Lenguajes
+
+- Conexión desde Python (`psycopg`), Java (JDBC), Node.js (`pg`), Rails
+- Pool de conexiones y buenas prácticas
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 17: Docker y PostgreSQL
+
+- PostgreSQL en Docker y Docker Compose
+- Persistencia, variables de entorno y entornos de desarrollo
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 18: Monitoreo y Mantenimiento
+
+- Logs, `pg_stat_activity`, `pg_stat_statements`
+- Vacuum / Autovacuum y mantenimiento preventivo
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 19: Migraciones y Versionado
+
+- Herramientas: Flyway, Liquibase
+- Control de versiones de esquemas y buenas prácticas DevOps
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+##  MÓDULO 20: Buenas Prácticas y Casos Reales
+
+- Diseño eficiente, antipatterns, escalabilidad
+- PostgreSQL en producción y casos reales
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## 🙌 Gracias — Preguntas
+
+- Contacto y recursos adicionales
+- ¿Quieres que exporte a PDF o PPTX?
+</script>
+</section>
+
+<!-- SLIDES END -->
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    center: true,
+    transition: 'convex',
+    backgroundTransition: 'zoom',
+    plugins: [ RevealMarkdown, RevealHighlight ]
+  });
+</script>
+</body>
+</html>
